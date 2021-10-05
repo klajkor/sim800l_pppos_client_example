@@ -1,0 +1,5 @@
+# ESP-IDF default build directory name
+build/
+
+sdkconfig
+sdkconfig.old

@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "WIN32",
+            "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "windows-gcc-x86",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${config:idf.espIdfPath}/components/**",
+                "${config:idf.espIdfPathWin}/components/**",
+                "${config:idf.espIdfPath}/tools/.espressif/**",
+                "${config:idf.espIdfPathWin}/tools/.espressif/**",
+                "${config:idf.espAdfPath}/components/**",
+                "${config:idf.espAdfPathWin}/components/**"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "${config:idf.espIdfPath}/components",
+                    "${config:idf.espIdfPathWin}/components",
+                    "${config:idf.espIdfPath}/tools/.espressif",
+                    "${config:idf.espIdfPathWin}/tools/.espressif",
+                    "${config:idf.espAdfPath}/components/**",
+                    "${config:idf.espAdfPathWin}/components/**"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            }
+        }
+    ],
+    "version": 4
+}
