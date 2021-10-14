@@ -553,10 +553,13 @@ modem_dce_t *sim800_init(modem_dte_t *dte)
     ESP_LOGI(DCE_TAG, "IMSI: %s", sim800_dce->parent.imsi);
     */
     /* Get operator name */
+
+    /*
     ESP_LOGI(DCE_TAG, "Get operator name");
     vTaskDelay(pdMS_TO_TICKS(1000));
     DCE_CHECK(sim800_get_operator_name(sim800_dce) == ESP_OK, "get operator name failed", err_io);
     ESP_LOGI(DCE_TAG, "Operator name: %s", sim800_dce->parent.oper);
+    */
     ESP_LOGI(DCE_TAG, "Successful init");
     vTaskDelay(pdMS_TO_TICKS(3000));
     return &(sim800_dce->parent);

@@ -41,8 +41,9 @@ typedef struct
     uint16_t delayMs;
 } SIM800_Command_s;
 
-SIM800Driver_RetVal_e SIM800Driver_SIM800_Init(SIM800Driver_SIM800Config_s *pSIM800Modem_i);
 SIM800Driver_RetVal_e SIM800Driver_SIM800_GPIO_Init(SIM800Driver_SIM800Config_s *pSIM800Modem_i);
+SIM800Driver_RetVal_e SIM800Driver_SIM800_UART_Init(SIM800Driver_SIM800Config_s *pSIM800Modem_i);
+SIM800Driver_RetVal_e SIM800Driver_SIM800_Init(SIM800Driver_SIM800Config_s *pSIM800Modem_i);
 SIM800Driver_RetVal_e SIM800Driver_SIM800_SendATcommand(SIM800Driver_SIM800Config_s *pSIM800Modem_i,
                                                         SIM800_Command_s *           pATcommand_i);
 SIM800Driver_RetVal_e SIM800Driver_SIM800_GetModemInfo(SIM800Driver_SIM800Config_s *pSIM800Modem_i,

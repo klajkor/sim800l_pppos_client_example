@@ -6,7 +6,7 @@
    software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
    CONDITIONS OF ANY KIND, either express or implied.
 */
-#include "bg96.h"
+//#include "bg96.h"
 #include "esp_log.h"
 #include "esp_modem.h"
 #include "esp_modem_netif.h"
@@ -35,6 +35,7 @@ static const int          GOT_DATA_BIT = BIT2;
 #define PIN_MODEM_RX 26
 
 static const char tag[] = "SIM800Driver_Init";
+static char       pppos_modem_apn[] = "internet.vodafone.net"; // Vodafone APN
 
 static const int TEST_UART_BUF_SIZE = 1024;
 
@@ -273,14 +274,15 @@ void app_main(void)
     testRetVal = SIM800Driver_RetVal_OK;
     if (SIM800Driver_SIM800_GPIO_Init(&Test_SIM800_Config) == SIM800Driver_RetVal_OK)
     {
-        ESP_LOGI(tag, "SIM800 Init successful");        
+        ESP_LOGI(tag, "SIM800 Init successful");
     }
     else
     {
         ESP_LOGE(tag, "SIM800 Init failed");
         testRetVal = SIM800Driver_RetVal_NOK;
     }
-    vTaskDelay(pdMS_TO_TICKS(5000));
+    vTaskDelay(pdMS_TO_TICKS(6000));
+    set_esp_modem_ppp_apn(pppos_modem_apn);
 
 #if CONFIG_LWIP_PPP_PAP_SUPPORT
     esp_netif_auth_type_t auth_type = NETIF_PPP_AUTHTYPE_PAP;
@@ -324,7 +326,7 @@ void app_main(void)
     vTaskDelay(pdMS_TO_TICKS(3000));
     modem_dce_t *dce = sim800_init(dte);
     ESP_LOGI(TAG, "Afer calling sim800_init(dce)");
-    
+
 #elif CONFIG_EXAMPLE_MODEM_DEVICE_BG96
     modem_dce_t *         dce = bg96_init(dte);
 #else

@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := pppos_client
+PROJECT_NAME := sim800l_pppos_client
 
 include $(IDF_PATH)/make/project.mk
 

@@ -169,6 +169,8 @@ esp_err_t esp_modem_set_rx_cb(modem_dte_t *dte, esp_modem_on_receive receive_cb,
  */
 esp_err_t esp_modem_notify_ppp_netif_closed(modem_dte_t *dte);
 
+void set_esp_modem_ppp_apn(char *new_modem_ppp_apn);
+
 #ifdef __cplusplus
 }
 #endif

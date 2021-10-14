@@ -1,0 +1,404 @@
+Initializing modem...
+AT
+�AT
+AT
+�
+OK
+AT&W
+
+OK
+AT+CFUN=0
+
+OK
+AT+CFUN=1,1
+
+OK
+[7559] ### TinyGSM Version: 0.11.4
+[7559] ### TinyGSM Compiled Module:  TinyGsmClientSIM800
+AT
+�AT
+�
+OK
+ATE0
+
+OK
+AT+CMEE=2
+
+OK
+AT+GMM
+
+SIMCOM_SIM800L
+
+OK
+[7873] ### Modem: SIMCOM SIM800L
+[7873] ### Modem: SIMCOM SIM800L
+AT+CLTS=1
+
+OK
+AT+CBATCHK=1
+
+OK
+AT+CPIN?
+
++CME ERROR: CFUN state is 0 or 4
+AT+CPIN?
+
+RDY
+
++CFUN: 1
+
++CPIN: SIM PIN
+
++CPIN: SIM PIN
+
+OK
+ATI
+
+SIM800 R14.18
+
+OK
+Modem: SIM800 R14.18
+AT+CPIN?
+
++CPIN: SIM PIN
+
+OK
+AT+CPIN="3933"
+
+OK
+Waiting for network...AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CPIN: READY
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
+Call Ready
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
+SMS Ready
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CTZV: +8,1
+[16442] ### Network time zone updated.
+
+*PSUTTZ: 2021,10,14,20,46,54,"+8",1
+[16443] ### Network time and time zone updated.
+
+DST: 1
+[16444] ### Daylight savings time state updated.
+
++CIEV: 10,"21670","vodafone HU","", 0, 0
+
++CREG: 0,2
+
+OK
+AT+CREG?
+
++CREG: 0,1
+
+OK
+ OK
+AT+CREG?
+
++CREG: 0,1
+
+OK
+Network connected
+Connecting to APN: internet.vodafone.netAT+CIPSHUT
+
+SHUT OK
+AT+CGATT=0
+
+OK
+AT+SAPBR=3,1,"Contype","GPRS"
+
+OK
+AT+SAPBR=3,1,"APN","internet.vodafone.net"
+
+OK
+AT+CGDCONT=1,"IP","internet.vodafone.net"
+
+OK
+AT+CGACT=1,1
+
++CTZV: +8,1
+[22469] ### Network time zone updated.
+
+*PSUTTZ: 2021,10,14,20,47,0,"+8",1
+[22473] ### Network time and time zone updated.
+
+DST: 1
+[22474] ### Daylight savings time state updated.
+
++CIEV: 10,"21670","vodafone HU","VFHU", 0, 0
+
+OK
+AT+SAPBR=1,1
+
+OK
+AT+SAPBR=2,1
+
++SAPBR: 1,1,"100.84.102.232"
+
+OK
+AT+CGATT=1
+
+OK
+AT+CIPMUX=1
+
+OK
+AT+CIPQSEND=1
+
+OK
+AT+CIPRXGET=1
+
+OK
+AT+CSTT="internet.vodafone.net","",""
+
+OK
+AT+CIICR
+
+OK
+AT+CIFSR;E0
+
+100.84.102.232
+
+OK
+AT+CDNSCFG="8.8.8.8","8.8.4.4"
+
+OK
+ OK
+Connecting to vsh.pp.uaAT+CIPCLOSE=0,1
+
++CME ERROR: operation not allowed
+AT+CIPSSL=0
+
+OK
+AT+CIPSTART=0,"TCP","vsh.pp.ua",80
+
+OK
+
+0, CONNECT OK
+ OK
+Performing HTTP GET request...
+AT+CIPSEND=0,32
+
+>GET /TinyGSM/logo.txt HTTP/1.1
+
+DATA ACCEPT:0,32
+AT+CIPSEND=0,17
+
+>Host: vsh.pp.ua
+
+DATA ACCEPT:0,17
+AT+CIPSEND=0,21
+
+>Connection: close
+
+
+DATA ACCEPT:0,21
+AT+CIPSEND=0,2
+
+>
+
+DATA ACCEPT:0,2
+AT+CIPRXGET=4,0
+
++CIPRXGET: 4,0,0
+
+OK
+AT+CIPSTATUS=0
+
++CIPSTATUS: 0,0,"TCP","212.237.59.104","80","CONNECTED"
+
+OK
+
++CIPRXGET: 1,0
+AT+CIPRXGET=4,0
+
++CIPRXGET: 4,0,347
+
+OK
+AT+CIPRXGET=2,0,347
+
++CIPRXGET: 2,0,347,0
+HTTP/1.1 302 Found
+Content-Type: text/html; charset=UTF-8
+Content-Length: 169
+Location: http://www.vodafone.hu/myvodafone/mobil
+Cache-Control: no-cache
+Connection: Close
+
+<html><head><title>302 Found</title></head><body><h1>302 Found</h1><p>The document has moved <a href="http://www.vodafone.hu/myvodafone/mobil">here</a></p></body></html>
+OK
+HTTP/1.1 302 Found
+Content-Type: text/html; charset=UTF-8
+Content-Length: 169
+Location: http://www.vodafone.hu/myvodafone/mobil
+Cache-Control: no-cache
+Connection: Close
+
+<html><head><title>302 Found</title></head><body><h1>302 Found</h1><p>The document has moved <a href="http://www.vodafone.hu/myvodafone/mobil">here</a></p></body></html>AT+CIPRXGET=4,0
++CIPRXGET: 4,0,0
+
+OK
+AT+CIPSTATUS=0
+
++CIPSTATUS: 0,0,"TCP","212.237.59.104","80","REMOTE CLOSING"
+
+OK
+
+AT+CIPCLOSE=0,1
+
+0, CLOSE OK
+Server disconnected
+AT+CIPSHUT
+
+SHUT OK
+AT+CGATT=0
+
++SAPBR 1: DEACT
+[87330] ### Unhandled: +SAPBR 1: DEACT
+GPRS disconnected
+
